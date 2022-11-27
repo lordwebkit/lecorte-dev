@@ -49,6 +49,8 @@ import Footer from "./components/Footer.vue";
   justify-content: space-between;
   padding-bottom: 150px;
 }
+
+
 .header-wrapper_preview-bg {
     width: 100%;
     height: 100vh;
@@ -72,6 +74,18 @@ import Footer from "./components/Footer.vue";
 
 .tasting-wrapper {
   padding: 100px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .header-wrapper {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 611px) {
+  .introduction-wrapper {
+    padding: 50px 0;
+  }
 }
 
 .black_bg {

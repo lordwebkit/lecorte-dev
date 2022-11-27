@@ -29,3 +29,15 @@
     width: 70%;
   }
 }
+
+@media screen and (max-width:899px) {
+  .grid-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:383px) {
+  .grid-wrapper {
+    width: 87%;
+  }
+}

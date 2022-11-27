@@ -55,6 +55,7 @@ import NavBar from "./NavBar.vue"
     height: 2px;
     background-color: #fff;
   }
+
   .header-info__burger::before,
   .header-info__burger::after {
     content: "";
@@ -72,17 +73,6 @@ import NavBar from "./NavBar.vue"
 @media screen and (max-width: 560px) {
   .header-info__link-phone-wrapper {
     display: none;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .header-info__link-adress-wrapper {
-    padding-right: 40px;
-  }
-
-  .header-info__burger {
-    justify-content: space-around;
-    padding: 5px 0;
   }
 }
 </style>

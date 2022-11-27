@@ -81,9 +81,51 @@
         }
     }
 
+    @media screen and (max-width: 611px) {
+        .introduction__title {
+            font-size: 32px;
+        }
+
+        .introduction__text {
+            font-size: 13px;
+        }
+    }
+
     @media screen and (max-width: 594px) {
         .introduction {
             padding-top: 30px;
+        }
+    }
+
+    @media screen and (max-width: 557px) {
+        .introduction {
+            padding: 30px;
+        }
+        .introduction__title {
+            font-size: 30px;
+        }
+
+        .introduction__title::after {
+            margin: 25px auto;
+        }
+
+        .introduction__text {
+            font-size: 13px;
+        }
+    }
+
+    @media screen and (max-width: 481px) {
+        .introduction {
+            padding-top: 20px;
+        }
+        .introduction__wine {
+            width: 120px;
+        }
+    }
+
+    @media screen and (max-width: 405px) {
+        .introduction__title {
+            font-size: 28px;
         }
     }
 </style>
