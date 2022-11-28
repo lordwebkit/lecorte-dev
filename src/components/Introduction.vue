@@ -87,7 +87,7 @@
         }
 
         .introduction__text {
-            font-size: 13px;
+            font-size: 14px;
         }
     }
 
@@ -108,10 +108,6 @@
         .introduction__title::after {
             margin: 25px auto;
         }
-
-        .introduction__text {
-            font-size: 13px;
-        }
     }
 
     @media screen and (max-width: 481px) {
@@ -120,6 +116,12 @@
         }
         .introduction__wine {
             width: 120px;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .introduction__text {
+            font-size: 13px;
         }
     }
 

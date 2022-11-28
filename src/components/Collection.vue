@@ -3,7 +3,7 @@
         <div class="collection-info-wrapper">
             <div class="collection__info collection-info">
                 <p class="collection-info__preview">Винтажи коллекций</p>
-                <h2 class="collection-info__title">Март 1980 Урожай Бордо</h2>
+                <h2 class="collection-info__title title_resize">Март 1980 Урожай Бордо</h2>
                 <p class="collection-info__text">
                     У вин насыщенный, изысканный вкус,
                     обладающий хорошей концентрацией фруктовых полутонов,
@@ -47,13 +47,15 @@
         <div class="collection__photo collection-photo">
             <div class="collection-photo-grid">
                 <div class="collection-photo__single-wrapper">
-                <img src="../assets/collection-wine-1.png" alt="бутылки вина">
-            </div>
+                    <img class="collection-photo__big" src="../assets/collection-wine-1.png" alt="бутылки вина">
+                </div>
 
-            <div class="collection-photo__multi-wrapper">
-                <img src="../assets/collection-wine-2.png" alt="бутылки вина">
-                <img src="../assets/collection-wine-3.png" alt="бутылки вина">
-            </div>
+                <div class="collection-photo__multi-wrapper">
+                    <img class="collection-photo__small collection-photo__small-1" src="../assets/collection-wine-2.png"
+                        alt="бутылки вина">
+                    <img class="collection-photo__small collection-photo__small-2" src="../assets/collection-wine-3.png"
+                        alt="бутылки вина">
+                </div>
             </div>
         </div>
     </div>
@@ -76,7 +78,6 @@
 }
 
 .collection-info__title {
-    font-size: 36px;
     line-height: 54px;
     font-weight: 700;
     color: #282828;
@@ -136,12 +137,137 @@
 }
 
 .collection-photo-grid {
-    width: 540px;
+    display: flex;
+    flex-direction: column;
 }
 
 .collection-photo__multi-wrapper {
     display: flex;
     justify-content: space-between;
     margin-top: 22px;
+}
+
+.collection-photo__big {
+    width: 100%;
+}
+
+.collection-photo__small {
+    width: calc(50% - 15px);
+}
+
+.collection-photo__small-1 {
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 1439px) {
+    .collection-info {
+        width: auto;
+    }
+
+    .collection__photo {
+        justify-content: start;
+    }
+
+    .collection-photo__single-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .collection-photo__multi-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collection-photo__big {
+        width: 70%;
+    }
+
+    .collection-photo__small {
+        width: 70%;
+    }
+
+    .collection-photo__small-1 {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1249px) {
+    .collection {
+        flex-direction: column;
+    }
+
+    .collection-info-table {
+        width: 100%;
+    }
+
+    .collection-photo-grid {
+        flex-direction: row;
+        margin-top: 45px;
+    }
+
+    .collection-photo__single-wrapper {
+        display: none;
+    }
+
+    .collection-photo__multi-wrapper {
+        margin-top: 0;
+        flex-direction: row;
+        flex: 3;
+    }
+
+    .collection-photo__small {
+        width: calc(50% - 15px);
+    }
+
+    .collection-photo__small-1 {
+        margin: 0;
+        margin-right: 15px;
+    }
+
+    .collection-photo__single-wrapper {
+        justify-content: center;
+        flex: 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .collection {
+        padding: 30px 0;
+    }
+
+    .collection-info__title::after {
+        margin-top: 15px;
+    }
+
+    .collection-info__text {
+        margin: 18px 0;
+    }
+
+    .collection-info__text_last {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    .collection-photo__multi-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .collection-photo__small {
+        width: auto;
+    }
+
+    .collection-photo__small-1 {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .collection-info__title {
+        width: auto;
+    }
 }
 </style>

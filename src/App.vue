@@ -23,13 +23,13 @@ import Footer from "./components/Footer.vue";
     </div>
   </div>
 
-  <!-- <div class="collection-wrapper beige_bg">
+  <div class="collection-wrapper beige_bg">
     <div class="grid-wrapper">
       <Collection />
     </div>
   </div>
 
-  <div class="tasting-wrapper black_bg">
+  <!-- <div class="tasting-wrapper black_bg">
     <div class="grid-wrapper">
       <Tasting />
     </div>
@@ -83,7 +83,8 @@ import Footer from "./components/Footer.vue";
 }
 
 @media screen and (max-width: 611px) {
-  .introduction-wrapper {
+  .introduction-wrapper,
+  .collection-wrapper {
     padding: 50px 0;
   }
 }
