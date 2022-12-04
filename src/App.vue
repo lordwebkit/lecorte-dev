@@ -4,7 +4,7 @@ import Preview from "./components/Preview.vue";
 import Introduction from "./components/Introduction.vue";
 import Collection from "./components/Collection.vue";
 import Tasting from "./components/Tasting.vue";
-// import Footer from "./components/Footer.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
@@ -35,11 +35,11 @@ import Tasting from "./components/Tasting.vue";
     </div>
   </div>
 
-  <!-- <div class="footer-wrapper">
+  <div class="footer-wrapper">
     <div class="grid-wrapper">
       <Footer></Footer>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <style scoped>

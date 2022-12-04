@@ -28,23 +28,27 @@
             </div>
             <div class="nav-bar-contact nav-bar__contact">
                 <a href="./" class="nav-bar-contact__button-wrapper nav-bar__button-wrapper">
-                    <p class="nav-bar-contact__button nav-bar__button">винный бутик LE CORTE</p>
+                    <p class="nav-bar-contact__button nav-bar__button nav-bar__boutique">винный бутик LE CORTE</p>
+                    <div class="nav-bar-contact__button nav-bar__button nav-bar__burger footer-burger">
+                        <span class="footer-burger__line"></span>
+                    </div>
                 </a>
                 <a href="./" class="nav-bar-contact__button-wrapper nav-bar__button-wrapper">
                     <p href="./" class="nav-bar-contact__button nav-bar__button">8 (812) 123-45-67</p>
                 </a>
                 <a href="./" class="nav-bar-contact__button-wrapper nav-bar__button-wrapper">
                     <p href="./" class="nav-bar-contact__button nav-bar__button nav-bar-social">
-                        <span class="nav-bar-contact__button-social nav-bar-social__youtube"></span>
-                        <span class="nav-bar-contact__button-social nav-bar-social__vk"></span>
-                        <span class="nav-bar-contact__button-social nav-bar-social__fb"></span>
+                        <span class="nav-bar-social__button nav-bar-social__youtube"></span>
+                        <span class="nav-bar-social__button nav-bar-social__vk"></span>
+                        <span class="nav-bar-social__button nav-bar-social__fb"></span>
                     </p>
                 </a>
-                <a href="./" class="nav-bar-contact__button-wrapper nav-bar__button-wrapper">
+                <a href="./" class="nav-bar-contact__button-wrapper nav-bar__button-wrapper nav-bar-contact__brand">
                     <p href="./" class="nav-bar-contact__button nav-bar__button">© le-corte.ru</p>
                 </a>
             </div>
         </nav>
+        
     </footer>
 </template>
 
@@ -76,6 +80,10 @@
 
 .nav-bar-contact__button {
     font-weight: 700;
+}
+
+.nav-bar__burger {
+    display: none;
 }
 
 .nav-bar-social {
@@ -125,5 +133,76 @@
 
 .nav-bar__button-wrapper:active {
     background-color: rgba(0, 0, 0, 0.123);
+}
+
+@media screen and (max-width: 979px) {
+    .nav-bar__button-wrapper {
+        flex: auto;
+    }
+}
+
+@media screen and (max-width: 759px) {
+    .nav-bar__menu {
+        display: none;
+    }
+
+    .nav-bar__contact {
+        border-top: 1px solid #fff;
+    }
+
+    .nav-bar__boutique {
+        display: none;
+    }
+
+    .footer-burger {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        height: 20px;
+    }
+
+    .footer-burger__line {
+        display: inline-block;
+        width: 40px;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .footer-burger::before,
+    .footer-burger::after {
+        content: "";
+        width: 40px;
+        height: 2px;
+        display: block;
+        background-color: #fff;
+    }
+}
+
+@media screen and (max-width: 619px) {
+    .nav-bar-social {
+        padding: 0;
+    }
+
+    .nav-bar-social__youtube {
+        margin-left: 5px;
+    }
+
+    .nav-bar-social__vk {
+        margin: 0 2px;
+    }
+    .nav-bar-social__fb {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 557px) {
+    .nav-bar-contact__brand {
+        display: none;
+    }
+
+    .nav-bar-contact__button-wrapper:nth-child(3) {
+        border-right: none;
+    }
 }
 </style>
