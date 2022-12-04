@@ -4,7 +4,7 @@ import Preview from "./components/Preview.vue";
 import Introduction from "./components/Introduction.vue";
 import Collection from "./components/Collection.vue";
 import Tasting from "./components/Tasting.vue";
-import Footer from "./components/Footer.vue";
+// import Footer from "./components/Footer.vue";
 </script>
 
 <template>
@@ -29,13 +29,13 @@ import Footer from "./components/Footer.vue";
     </div>
   </div>
 
-  <!-- <div class="tasting-wrapper black_bg">
+  <div class="tasting-wrapper black_bg">
     <div class="grid-wrapper">
       <Tasting />
     </div>
   </div>
 
-  <div class="footer-wrapper">
+  <!-- <div class="footer-wrapper">
     <div class="grid-wrapper">
       <Footer></Footer>
     </div>
@@ -82,9 +82,16 @@ import Footer from "./components/Footer.vue";
   }
 }
 
+@media screen and (max-width: 768px) {
+  .tasting-wrapper {
+    padding: 80px 0;
+  }
+}
+
 @media screen and (max-width: 611px) {
   .introduction-wrapper,
-  .collection-wrapper {
+  .collection-wrapper,
+  .tasting-wrapper {
     padding: 50px 0;
   }
 }

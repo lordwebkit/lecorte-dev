@@ -23,16 +23,16 @@
 }
 
 .text_resize {
-  font-size: 15px;
+  font-size: 16px;
 }
 
-@media screen and (max-width:1440px) {
+@media screen and (max-width:1664px) {
   .grid-wrapper {
     width: 65%;
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1146px) {
   .grid-wrapper {
     width: 70%;
   }

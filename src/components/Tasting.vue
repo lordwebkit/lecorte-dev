@@ -4,13 +4,13 @@
             <div class="tasting__header-before header-before">
                 <div class="header-before__el header-decore-el"></div>
             </div>
-            <h2 class="tasting__header">Запись на дегустацию</h2>
+            <h2 class="tasting__header title_resize">Запись на дегустацию</h2>
             <div class="tasting__header-after header-after">
                 <div class="header-after__el header-decore-el"></div>
             </div>
         </div>
         <div class="content-wrapper">
-            <p class="tasting__text">
+            <p class="tasting__text text_resize">
                 В нашей коллекции собраны лучшие Вина Бордо.
                 Прикоснитесь к искуству винного дела на нашей дегустации.
                 Для этого отправьте заявку и дождитесь ответа нашей компании
@@ -20,9 +20,10 @@
         <form class="tasting-form tasting__form" action="" method="post">
             <div class="content-wrapper">
                 <fieldset class="tasting-form__fieldset tasting-form__client-info">
-                    <input class="tasting-form__field-name tasting-form__field" type="name" name="name" value="Имя">
+                    <input class="tasting-form__field-name tasting-form__field" type="name" name="name"
+                        placeholder="Имя">
                     <input class="tasting-form__field-phone tasting-form__field" type="phone" name="phone"
-                        value="Телефон">
+                        placeholder="Телефон">
                 </fieldset>
                 <fieldset class="tasting-form__fieldset tasting-form__location-info">
                     <input class="tasting-form__field-location tasting-form__field" type="text" name="location"
@@ -79,8 +80,6 @@
 
 .tasting__header {
     text-align: center;
-    font-size: 36px;
-    line-height: 54px;
 }
 
 .tasting__header-wrapper {
@@ -122,7 +121,6 @@
 }
 
 .tasting__text {
-    font-size: 16px;
     line-height: 24px;
     text-align: center;
     font-weight: lighter;
@@ -135,6 +133,17 @@
     height: 1px;
     background-color: #fff;
     margin: 40px auto;
+}
+
+.tasting-form::after {
+    content: "";
+    width: 3px;
+    height: 100px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    right: -3px;
+    top: -100px;
 }
 
 .tasting-form__fieldset {
@@ -204,5 +213,172 @@
 
 .tasting-form__button:active {
     box-shadow: 2px 2px 8px rgb(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 1809px) {
+
+    .tasting::before,
+    .tasting::after {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .tasting::before {
+        width: 234px;
+        height: 234px;
+        top: -40px;
+    }
+
+    .tasting::after {
+        width: 234px;
+        height: 180px;
+        right: -55px;
+        top: -40px;
+    }
+
+    .tasting-form::before {
+        content: "";
+        width: 3px;
+        height: 40px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        left: -3px;
+        top: -40px;
+    }
+}
+
+@media screen and (max-width: 1739px) {
+    .tasting::before {
+        width: 208px;
+        height: 208px;
+        top: -40px;
+    }
+
+    .tasting::after {
+        width: 208px;
+        height: 160px;
+        right: -46px;
+        top: -22px;
+    }
+
+    .tasting-form::before {
+        content: "";
+        width: 3px;
+        height: 40px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        left: -3px;
+        top: -40px;
+    }
+
+}
+
+@media screen and (max-width: 1490px) {
+    .tasting::before {
+        top: -40px;
+        left: -20px;
+
+    }
+
+    .tasting::after {
+        right: -66px;
+        top: -22px;
+    }
+}
+
+@media screen and (max-width: 1490px) {
+
+    .tasting__header-before,
+    .tasting__header-after {
+        display: none;
+    }
+
+    .tasting::after {
+        right: -36px;
+        top: -22px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tasting::before {
+        width: 182px;
+        height: 182px;
+        top: -22px;
+        left: -22px;
+    }
+
+    .tasting::after {
+        width: 182px;
+        height: 140px;
+        top: -14px;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .tasting::before {
+        width: 156px;
+        height: 156px;
+        left: -28px;
+    }
+
+    .tasting::after {
+        width: 156px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tasting::before {
+        width: 130px;
+        height: 130px;
+        top: -12px;
+    }
+
+    .tasting::after {
+        width: 130px;
+        height: 100px;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 746px) {
+    .content-wrapper {
+        width: auto;
+        padding: 0 35px;
+    }
+    .tasting__form {
+        padding: 60px 0;
+    }
+    .tasting-form__client-info {
+        flex-direction: column;
+    }
+    .tasting-form__field-name {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 706px) {
+    .tasting::before,
+    .tasting::after {
+        display: none;
+    }
+    .tasting__text::before {
+        margin: 25px auto;
+    }
+}
+
+@media screen and (max-width: 507px) {
+    .tasting__form::after {
+        height: 120px;
+        top: -120px
+    }
+
+    .tasting__form::before {
+        height: 60px;
+        top: -60px
+    }
 }
 </style>
